@@ -68,6 +68,8 @@
   
   p {
     margin-bottom: 1rem;
+    overflow: scroll;
+    height: 10em;
   }
   
   code {

@@ -27,10 +27,16 @@
           <figure class="card code-card">
             <h2 class="card-header">Anchors</h2>
             <div class="card-body">
-              <p>Description..</p>
+              <p>Regex anchors are special characters in regular expressions that allow you to match specific positions in a string. They do not match any actual characters, but rather represent positions before or after characters in a string. The two main types of regex anchors are the caret ^ and dollar $.<br><br>The caret anchor matches the beginning of a line or string. For example, the regex "/^S/" would match any line or string that starts with "S".<br>The dollar sign anchor matches the end of a line or string. For example, the regex "/y$/" would match any line or string that ends with "y".<br>Try it yourself! the statements below will equal true when logged to the console.</p>
             </div>
             <!-- regex example -->
-            <pre class="code-block"><code>regex example here...</code></pre>
+            <pre class="code-block"><code>// Notice that regex are case sensitive.
+let caret = 'Spooky';
+console.log(/^S/.test(caret));
+
+// Notice the position of the $.
+const dollar = 'Spooky';
+console.log(/y$/.test(dollar));</code></pre>
           </figure>
         </div>
         <div class="card-column">
