@@ -21,6 +21,10 @@
 
 ## Credits
 
+This web template was used from Module 2 Mini project from the UofT bootcamp.
+
+Credits to my professor, instructors, classmates, and tutors for their invaluable support and guidance throughout my learning journey. Also to the developers of the various technologies used, including Google, documentation resources, and AI technologies that have provided valuable assistance and inspiration.
+
 ## License
 
 MIT License
