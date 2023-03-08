@@ -40,10 +40,17 @@ console.log(/y$/.test(dollar));</code></pre>
           <figure class="card code-card">
             <h2 class="card-header">Quantifiers</h2>
             <div class="card-body">
-              <p>Description..</p>
+              <p>Regex quantifiers are used to specify the number of times a particular character or group of characters can occur in a pattern. They allow you to match a specific number of occurrences or a range of occurrences of a character or group of characters.<br><br>To demonstrate this we will do a small exercise. Let's say we have an array of strings that contain color codes in the form of hexadecimal values. We want to extract all the valid color codes from the array and store them in a new array. We can use the regular expression /^#?([a-f0-9]{6}|[a-f0-9]{3})$/ to match only valid color codes.<br><br>In the code below using the regular expression /^#?([a-f0-9]{6}|[a-f0-9]{3})$/ with the filter() method, we were able to extract only the valid color codes from the array. </p>
             </div>
             <!-- regex example -->
-            <pre class="code-block"><code>regex example here...</code></pre>
+            <pre class="code-block"><code>const colors = ["#000000", "red", "#123abc", "#fff", "spooky", "#999999"];
+
+const regex = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i;
+
+const validColors = colors.filter(color => regex.test(color));
+
+console.log(validColors); // output ["#000000", "#123abc", "#fff", "#999999"]
+              </code></pre>
           </figure>
         </div>
 
@@ -51,10 +58,24 @@ console.log(/y$/.test(dollar));</code></pre>
           <figure class="card code-card">
             <h2 class="card-header">Grouping Constructs</h2>
             <div class="card-body">
-              <p>Description..</p>
+              <p>Grouping constructs are used in regular expressions to group together parts of a pattern so that they can be treated as a single unit. They allow you to apply quantifiers, alternations, and other operations to the group as a whole, rather than to individual characters or character classes.<br><br>To demonstrate let's say we have a string that contains a mixture of valid and invalid color codes in the form of hexadecimal values. We want to extract only the valid color codes and store them in a new array, along with a label indicating whether they are three-digit or six-digit codes. We can use the grouping construct () in the regular expression to capture the matched value and differentiate between the two types of color codes.<br><br>By using the grouping construct () in the regular expression and capturing the matched value, we were able to differentiate between the two types of color codes and store them in a useful format.</p>
             </div>
             <!-- regex example -->
-            <pre class="code-block"><code>regex example here...</code></pre>
+            <pre class="code-block"><code>const colors = "Invalid color codes: #123, #456789, #abcdef, #ggg, #999999";
+
+const spooky = /#?([a-f0-9]{6}|[a-f0-9]{3})/gi;
+
+const validColors = [];
+
+let match;
+while (match = spooky.exec(colors)) {
+  const color = match[1];
+  const type = color.length === 3 ? "3-digit" : "6-digit";
+  validColors.push(`${color} (${type})`);
+}
+
+console.log(validColors); // output ["123 (3-digit)", "456789 (6-digit)", "abcdef (6-digit)", "999999 (6-digit)"]
+              </code></pre>
           </figure>
         </div>
         <div class="card-column">
