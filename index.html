@@ -101,10 +101,24 @@ console.log(validColors); // output ["#123", "#456789", "#abcdef", "#999999"]
           <figure class="card code-card">
             <h2 class="card-header">Character Classes</h2>
             <div class="card-body">
-              <p>Description..</p>
+              <p>Character classes, also known as character sets, are a type of construct used in regular expressions to match a single character from a specified set of characters. They are enclosed in square brackets [ ], and any character that matches any one of the characters inside the brackets is considered a match.<br><br>To demonstrate this in the code below we have a string that contains a mixture of valid and invalid color codes in the form of hexadecimal values. We want to extract only the valid color codes and store them in a new array. We can use the character classes [a-f] and [0-9] to match any character that is a hexadecimal digit (0-9, a-f).<br><br>By using the character classes [a-f] and [0-9] to match any character that is a hexadecimal digit, we were able to match only the valid color codes from the original string, while ignoring any invalid characters or strings.</p>
             </div>
             <!-- regex example -->
-            <pre class="code-block"><code>regex example here...</code></pre>
+            <pre class="code-block"><code>const colors = "Invalid color codes: #123, #456789, #abcdef, #ggg, #999999";
+
+const spooky = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i;
+
+const validColors = [];
+
+colors.split(',').forEach(color => {
+  const trimmedColor = color.trim();
+  if (spooky.test(trimmedColor)) {
+    validColors.push(trimmedColor);
+  }
+});
+
+console.log(validColors); // output ["#123", "#abcdef", "#999999"]
+              </code></pre>
           </figure>
         </div>
 
@@ -113,11 +127,20 @@ console.log(validColors); // output ["#123", "#456789", "#abcdef", "#999999"]
             <h2 class="card-header">The OR Operator</h2>
             <div class="card-body">
               <p>
-                Description..
+                The OR operator, denoted by the vertical bar (|) or the pipe symbol, is a logical operator used in regular expressions to match one of two or more alternative patterns. It allows you to create more complex regular expressions by matching multiple patterns with a single regular expression.<br><br>To demonstrate this in the code below we have a form that allows users to enter either three-digit or six-digit color codes in the form of hexadecimal values, with or without a preceding hash symbol. We want to match either format using a single regular expression. We can use the OR operator (|) to match either the pattern [a-f0-9]{6} or [a-f0-9]{3}.<br><br>By using the OR operator (|) to match either the pattern [a-f0-9]{6} or [a-f0-9]{3}, we were able to match either format of color codes using a single regular expression, making our regular expression more efficient and flexible.
               </p>
             </div>
             <!-- regex example -->
-            <pre class="code-block"><code>regex example here...</code></pre>
+            <pre class="code-block"><code>const color1 = "#123abc";
+
+const color2 = "#fff";
+
+const spooky = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i;
+
+console.log(spooky.test(color1)); // output true
+
+console.log(spooky.test(color2)); // output true
+              </code></pre>
           </figure>
         </div>
 
