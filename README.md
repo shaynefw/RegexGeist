@@ -2,6 +2,8 @@
       
 ## Description
 
+Regex Geist is a comprehensive and interactive tutorial on regular expressions (regex), a powerful tool for pattern matching and text manipulation in computer programming. The tutorial is designed to be accessible to users of all skill levels, with clear explanations and examples that illustrate the concepts in a practical and user-friendly way.
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -17,7 +19,7 @@
 
 ## Usage
 
-![screenShot]()
+![screenShot](./assets/images/rg-img.png)
 
 ## Credits
 
@@ -52,17 +54,20 @@ SOFTWARE.
 
 ## Badges
 
-![HTML](https://img.shields.io/badge/HTML-NUMBER%25-orange)
-![CSS](https://img.shields.io/badge/CSS-NUMBER%25-blue)
-![JavaScript](https://img.shields.io/badge/JavaScript-NUMBER%25-yellow)
+![HTML](https://img.shields.io/badge/HTML-63.1%25-orange)
+![CSS](https://img.shields.io/badge/CSS-36.9%25-blue)
 
 ## Features
 
-## How to Contribute
+Interactive tutorial: This website provides an interactive tutorial on regular expressions that covers a wide range of topics, from basic syntax and pattern matching techniques to advanced features such as lookaround assertions and backreferences.
 
-## Tests
+Comprehensive reference guide: This website includes a comprehensive reference guide that provides a complete list of all the regex syntax and constructs, along with examples and explanations of how they work.
 
-## Questions
-  
-If you have any questions you can reach me by...
+User-friendly design: This website is designed to be user-friendly, with clear explanations and examples that illustrate the concepts in a practical and easy-to-understand way.
+
+Accessible to all skill levels: This tutorial and reference guide are designed to be accessible to users of all skill levels, from beginners to advanced users.
+
+Interactive examples and exercises: This tutorial includes interactive examples and exercises that allow users to practice what they have learned and apply it in real-world situations.
+
+Mobile-friendly: This website is mobile-friendly and can be accessed on a wide range of devices, including smartphones and tablets.
   
