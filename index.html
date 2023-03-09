@@ -83,11 +83,18 @@ console.log(validColors); // output ["123 (3-digit)", "456789 (6-digit)", "abcde
             <h2 class="card-header">Bracket Expressions</h2>
             <div class="card-body">
               <p>
-                Description..
+                Bracket expressions, also known as character classes, are a type of construct used in regular expressions to match a set of characters. They allow you to specify a range of characters or a set of characters that can be matched by a single character in the input string.<br><br>To demonstrate this in the code below we have a string that contains a mixture of valid and invalid color codes in the form of hexadecimal values. We want to extract only the valid color codes and store them in a new array. We can use the bracket expression [a-f0-9] to match any character that is a hexadecimal digit (0-9, a-f).<br><br>By using the bracket expression [a-f0-9] to match any character that is a hexadecimal digit, we were able to match only the valid color codes from the original string, while ignoring any invalid characters or strings.
               </p>
             </div>
             <!-- regex example -->
-            <pre class="code-block"><code>regex example here...</code></pre>
+            <pre class="code-block"><code>const spooky = "Invalid color codes: #123, #456789, #abcdef, #ggg, #999999";
+
+const regex = /#?([a-f0-9]{6}|[a-f0-9]{3})/gi;
+
+const validColors = spooky.match(regex);
+
+console.log(validColors); // output ["#123", "#456789", "#abcdef", "#999999"]
+              </code></pre>
           </figure>
         </div>
         <div class="card-column">
