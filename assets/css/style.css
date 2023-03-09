@@ -209,4 +209,19 @@
       max-width: 33.333%;
     }
   }
+
+  .pglink {
+    color: var(--heliotrope);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .pglink:hover {
+    color: var(--gin);
+  }
+
+  .tryout {
+    color: var(--gin);
+    text-decoration: none;
+    font-weight: 700;
+  }
   
